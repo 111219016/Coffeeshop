@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        眠貓咖啡屋
+    </title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/home-copy copy.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
+    <script src="../js/home-copy copy.js"></script>
+
+    
+    <!-- <style>
+        /* 設定 h1~h6 的字體大小 */
+        h1 {
+            font-size: 50px;
+            /* 可依需求調整大小 */
+        }
+
+        h2 {
+            font-size: 44px;
+            /* 可依需求調整大小 */
+        }
+
+        h3 {
+            font-size: 32px;
+            /* 可依需求調整大小 */
+        }
+
+        h4 {
+            font-size: 24px;
+            /* 可依需求調整大小 */
+        }
+
+        h5 {
+            font-size: 20px;
+            /* 可依需求調整大小 */
+        }
+
+        h6 {
+            font-size: 18px;
+            /* 可依需求調整大小 */
+        }
+        p{
+            font-size: 14px;
+        }
+        ::selection {
+            background-color: #f9e9b5; /* 橘色背景 */
+            color: #9a802c; /* 白色文字 */
+        }
+    </style> -->
+
+</head>
+
+<body onbeforeunload="window.scrollTo(0, 0)">
+    <!-- Logo & 店名(navbar 導覽列) & first picture-->
+
+    <!-- navbar 導覽列-->
+    <header>
+        <!-- 新版導覽列 -->
+        <div class="navbar">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo 1.png" alt="logo main">
+            </a>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-text">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="html/menu.html" class="nav-text">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="html/reservation.html" class="nav-text">Reservation</a>
+                </li>
+                <li class="nav-item"><a href="html/info.html" class="nav-text">Info</a>
+                </li>
+            </ul>
+            <!-- 漢堡選單 start-->
+            <input id="nav-toggle" type="checkbox">
+            <label for="nav-toggle" class="ham">
+            <div class="ham-origin">
+                <div class="ham-bar ham-bar--top"></div>
+                <div class="ham-bar ham-bar--middle"></div>
+                <div class="ham-bar ham-bar--bottom"></div>
+            </div>
+            </label>
+
+            <nav class="menu">
+            <ul class="menu-list">
+                <li class="menu-item">
+                <a class="menu-link" href="../index.html">Home</a>
+                </li>
+                <li class="menu-item">
+                <a class="menu-link" href="html/menu.html">Menu</a>
+                </li>
+                <li class="menu-item">
+                <a class="menu-link" href="html/reservation.html">Reservation</a>
+                </li>
+                <li class="menu-item">
+                <a class="menu-link" href="html/info.html">Info</a>
+                </li>
+            </ul>
+            <div class="hambar-icons">
+                <a href="https://www.facebook.com/">
+                    <img class="icon-item" src="../images/fb.svg" alt="fb" width="56px" height="56px">
+                </a>
+                <a href="https://www.instagram.com/">
+                <img class="icon-item" src="../images/ins.svg" alt="ig" width="56px" height="56px">
+                </a>
+                <a href="mailto:example@example.com">
+                <img class="icon-item mail" src="../images/mail.svg" alt="mail" width="56px" height="56px">
+                </a>
+            </div>
+            </nav>
+            <!-- 漢堡選單 end-->
+        </div>
+
+    </header>
+    <!-- end navbar-->
+
+    <!-- 首圖動畫 start-->
+    <label>
+        <!--提醒切斷文字-->
+        <input type="checkbox"/>
+        <div class="scene">
+            <!--太陽月亮-->
+            <div class="sun"></div>
+            <div class="moon"></div>
+            <!-- 上方文字 -->
+            <div class="first-L-title">
+                <a href="#" class="container-logo">
+                    <img class="nightimg" src="../images/logo 3.png" alt="logo">
+                    <img class="dayimg" src="../images/logo 1.png" alt="logo">
+                </a>
+                <div class="container-headline">
+                    <span class="common-headline__title">眠</span>
+                    <span class="common-headline__title">貓</span>
+                    <span class="common-headline__title">咖</span>
+                    <span class="common-headline__title">啡</span>
+                    <span class="common-headline__title">屋</span>
+                    <h2 class="small-headline__title">眠貓咖啡屋</h2>
+                </div>
+                <a href="#" class="small-container__logo">
+                    <img class="nightimg" src="../images/logo 3.png" alt="logo">
+                    <img class="dayimg" src="../images/logo 1.png" alt="logo">
+                </a>
+                <span class="s-text">Click to change the day&night</span>
+            </div>
+        <div>
+            <!-- <img class="cafe-house" src="../images/house.png" alt="cafe house"> -->
+        </div>
+
+        <!--星星-->
+        <div class="allstars">
+            <div class="star1"></div>
+            <div class="star2"></div>
+            <div class="star3"></div>
+            <div class="star4"></div>
+            <div class="star5"></div>
+            <div class="star6"></div>
+            <div class="star7"></div>
+            <div class="star8"></div>
+            <div class="star9"></div>
+            <div class="star10"></div>
+            <div class="star11"></div>
+            <div class="star12"></div>
+            <div class="star13"></div>
+            <div class="star14"></div>
+            <div class="star15"></div>
+            <div class="star16"></div>
+            <div class="star17"></div>
+            <div class="star18"></div>
+            <div class="star19"></div>
+            <div class="star20"></div>
+            <div class="star21"></div>
+            <div class="star22"></div>
+            <div class="star23"></div>
+            <div class="star24"></div>
+            <div class="star25"></div>
+            <div class="star26"></div>
+            <div class="star27"></div>
+            <div class="star28"></div>
+            <div class="star29"></div>
+            <div class="star30"></div>
+            <div class="star31"></div>
+        </div>
+        
+        </div>
+    </label>
+    <!-- 首圖動畫 end -->
+    
+    <!-- about~specials是同張背景圖 -->
+     <!-- 小建議:可以將about~specials的內容放置在一個container裡面，方便調整區塊大小又不會動到背景 -->
+    <div class="about-specials">
+        <!-- About -->
+        <div class="about aos" id="about">
+            <!-- title -->
+            <div class="title-template aos">
+                <h2 class="title-s">About</h2>
+                <div class="container-headline-content">
+                    <span class="common-headline-content__title">關</span>
+                    <span class="common-headline-content__title">於</span>
+                    <span class="common-headline-content__title">我</span>
+                    <span class="common-headline-content__title">們</span>
+                </div>
+            </div>
+            
+                <!-- stars & lines -->
+                <div class="stars_lines">
+                    <img src="../images/star-w.svg" alt="star_white" class="center-image">
+                </div>
+                    <!-- end title -->
+
+            <!-- picture -->
+            <img class="about-img aos" src="../images/home_about-v3.png " alt="about" width="" height="">
+            
+
+            <!-- 重疊漂浮框-1 -->
+            <div class="float-block-1 aos">
+                <!-- picture info --> 
+                    <div>       
+                        <h3>歡迎......</h3>
+                        <h6>　在這個繁忙的世界中，眠貓咖啡屋是您尋找片刻寧靜的最佳去處。
+                            透過窗戶，您可以看到月光灑落在店外的小露臺，星空與咖啡香交織成一幅美麗的畫面。
+                            每杯咖啡都精心手工沖煮，讓您在忙碌的生活中找到心靈的慰藉。
+                            這裡還有各式美味的甜點，完美搭配您的咖啡時光。</h6>
+                    </div>
+            </div>
+            <!-- picture info RWD-->
+            <!-- <div>       
+                <h3>歡迎......</h3>
+                <h6>　在這個繁忙的世界中，眠貓咖啡屋是您尋找片刻寧靜的最佳去處。
+                    透過窗戶，您可以看到月光灑落在店外的小露臺，星空與咖啡香交織成一幅美麗的畫面。
+                    每杯咖啡都精心手工沖煮，讓您在忙碌的生活中找到心靈的慰藉。
+                    這裡還有各式美味的甜點，完美搭配您的咖啡時光。</h6>
+            </div>                 -->
+        </div>
+
+        <!-- Specials -->
+        <div class="specials">
+            <!-- title -->
+            <div class="title-template aos">
+                <h6 class="title-s">SPECIALS</h6>
+                <div class="container-headline-content">
+                    <span class="common-headline-content__title">特</span>
+                    <span class="common-headline-content__title">別</span>
+                    <span class="common-headline-content__title">菜</span>
+                    <span class="common-headline-content__title">單</span>
+                </div>
+                <!-- stars & lines -->
+                <div class="stars_lines">
+                    <img src="../images/star-w.svg" alt="star_white" class="center-image">
+                </div>
+            </div>
+            <!-- end title -->
+
+            <!-- ad -->
+            <div class="carousel aos">
+                <div class="carousel-items"><img src="../images/pp.png" alt=""></div>
+                <div class="carousel-items"><img src="../images/p2p2.png" alt=""></div>                                    
+            </div>
+            <!-- 重疊漂浮框-2
+            <div class="float-block-2">
+                 !--picture info--  
+                    <div>       
+                        <h3>月光鬆餅</h3>
+                        <h4>季節限定MENU，蓬鬆的鬆餅配上甜美的果醬
+                            (果醬可選 藍莓/莓果/檸檬)</h4>
+                        <a href="../HTML/menu.html" class="btn-setting-more btn-more btn-moresize">More</a>
+
+                    </div>
+            </div> -->
+            <!-- picture info RWD-->
+            <!-- <div>       
+                <h3>月光鬆餅</h3>
+                <h4>季節限定MENU，蓬鬆的鬆餅配上甜美的果醬
+                    (果醬可選 藍莓/莓果/檸檬)</h4>
+                <a href="HTML/menu.html" class="btn-setting-more btn-more btn-moresize">More</a>
+
+            
+        </div> -->
+        </div>
+    </div>
+    
+    <!-- Reservation -->
+    <div class="reservation">
+        <!-- 背景遮罩 -->
+        <div class="mask-dark"></div>
+        <!-- title -->
+        <div class="title-template aos">
+            <h6 class="title-s">RESERVATION</h6>
+            <div class="container-headline-content">
+                <span class="common-headline-content__title">訂</span>
+                <span class="common-headline-content__title">位</span>
+            </div>
+            <!-- stars & lines -->
+            <div class="stars_lines">
+                <img src="../images/star-w.svg" alt="star_white" class="center-image">
+            </div>
+        </div>
+        <!-- end title -->
+    
+        <!-- 等待光臨 -->
+        <h3 class="aos">我們誠摯的等待您的光臨</h3>
+    
+        <!-- button -->
+        <a href="../HTML/reservation.html" class="btn btn-primary btn-lg aos">我要訂位</a>
+    </div>
+    <!-- end reservation-->
+    
+    <!-- Map -->
+    <div class="map">
+        <!-- title -->
+        <div class="title-template aos">
+            <h6 class="title-s">MAP</h6>
+            <div class="container-headline-content">
+                <span class="common-headline-content__title">門</span>
+                <span class="common-headline-content__title">店</span>
+                <span class="common-headline-content__title">位</span>
+                <span class="common-headline-content__title">置</span>
+            </div>
+            <!-- stars & lines -->
+            <div class="stars_lines">
+                <img src="../images/star-w.svg" alt="star_white" class="center-image">
+            </div>
+        </div>
+        <!-- end title -->
+
+        <div class="contactngoogle">
+            <!-- 左邊文字 -->
+            <!-- 字&線 -->
+            <div class="contact-text aos">
+                <h4>PHONE & TEL</h4>
+                <hr>
+                <h5>0912-345-678</h5>
+                <br>
+                <h4>LOCATION</h4>
+                <hr>
+                <h5>台北市大安區和平東路二段134號</h5>
+                <br>
+                <h4>HOURS</h4>
+                <hr>
+                <h5>上午10:00至下午9:30，周五公休</h5>
+            </div>
+            <!-- google map -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2784017805598!2d121.5446374!3d25.0246244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1729801252841!5m2!1szh-TW!2stw"
+                width="800" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" id="googlemap" class="aos"></iframe>
+            <!-- google map color 
+            <div id="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+            <script>
+                async function initMap() {
+                    try {
+                        // 動態載入樣式 JSON
+                        const response = await fetch('../json/mapStyle.json');
+                        const mapStyle = await response.json();
+
+                        // 初始化地圖
+                        const map = new google.maps.Map(document.getElementById('map'), {
+                            center: { lat: 25.0246, lng: 121.5446 },
+                            zoom: 14,
+                            styles: mapStyle // 套用動態載入的樣式
+                        });
+                    } catch (error) {
+                        console.error('地圖樣式載入失敗:', error);
+                    }
+                }
+
+                // 初始化地圖
+                window.onload = initMap;
+            </script>
+            
+        </div>-->
+    </div>
+    <!-- end map-->
+
+    <!-- footer 還沒合併-->
+    <footer>
+        <h2 class="footer-small">眠貓咖啡屋</h2>
+
+        <p id="copyright">copyright © 2024</p>
+        
+        <ul class="footer-small footer-small-ul">
+            <li class="footer-small-item">
+                <a href="menu.html" class="small-nav-text">Menu</a>
+            </li>
+            <li class="footer-small-item">
+                <a href="reservation.html" class="small-nav-text">Reservation</a>
+            </li>
+            <li class="footer-small-item"><a href="info.html" class="small-nav-text">Info</a>
+            </li>
+        </ul>
+        <!-- icons -->
+        <div class="icons">
+            <a href="https://www.facebook.com/">
+                <img class="icon-item" src="../images/fb.svg" alt="fb" width="56px" height="56px">
+            </a>
+            <a href="https://www.instagram.com/">
+            <img class="icon-item" src="../images/ins.svg" alt="ig" width="56px" height="56px">
+            </a>
+            <a href="mailto:example@example.com">
+            <img class="icon-item mail" src="../images/mail.svg" alt="mail" width="56px" height="56px">
+            </a>
+        </div>
+    </footer>
+    <!-- end footer-->
+    
+
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,325 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+/* 
+*page name 眠貓咖啡屋 menu
+*copyright 2024
+*author 余盈蓁 陳星璇
+*licensed
+*/
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+html {
+    font-size: 62.5%;
+  }
+  
+body{
+    margin:0;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-family: '微軟正黑體',arial;/* 新增字體設定 前面微軟正黑體為主要字體，後面為替補字體 */
+    overflow-x: hidden;
+}
+/* 字體設定 */
+h1,h2{
+    font-family: "cwTeXFangSong", serif;
+    /* font-size:calc( 100vw * 80 / 1920 ); */
+}
+h3,h4,h5,h6 {
+    font-family: "微軟正黑體", serif;
+    font-weight: normal; /* 取消粗體 */
+    /* font-size:calc( 40vw * 80 / 1920 ); */
+}
+
+/* 變數管理 */
+:root {
+    /* 定義變數 */
+    --navbar-height: 72px;
+    --w-navbar: 80px;
+    
+    --sunmoon-size:90px;
+    --sunmoon-height: 23%;
+    --first-logo-height: 62%;
+    /* --first-logo-height: calc(65% - (10vw / 2)) ; */
+}
+
+
+
+/* ------------------------- *\ 
+    Layout
+\* ------------------------- */
+
+.mask-dark{
+    /* 注意權重，以及遮罩寫的位置 */
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 首圖 */
+.first{
+    /* width: 1920px; */
+    height: 455px;
+    background-image: url("../images/home_first-v4.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* title */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    
+}
+
+/* ------------------------- *\ 
+    navbar 導覽列
+\* ------------------------- */
+/* navbar下面的小弧形 */
+.navbar::before {
+    width: 65px;
+    height: 280px;
+    position: absolute;
+    top: calc(var(--navbar-height) - 0.5px);
+    transform-origin: left top;
+    transform: scaleY(-1) rotate(-90deg);
+
+    display: block;
+    background-image: url(../images/gnav_bg.svg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    z-index: 1;
+}
+
+.navbar{/* 導覽列大框架 */
+    height: var(--navbar-height);/* 高度 */
+    background-color:rgba(250,247,237,1);/* 將hex色彩轉成rgba，最後一個數值為透明度 */
+    display: flex;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    top: 0;
+    justify-content: space-between;/* logo 導覽按鈕左右分開 */
+    align-items: center;/* 居中對齊 */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);/* 陰影 */
+}
+
+/* 左側logo與title處 */
+.logo {
+    z-index: 8;
+    margin-top: 20px;
+    margin-left: 30px;
+    transition: 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.logontitle{/* logo & title */
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: var(--w-navbar);
+    height: auto;
+    padding-top: 50px;
+}
+/* .header-title{
+    margin:0;
+    margin-left: 20px;
+    color: #ffffff;
+    font-family: "cwTeXFangSong", serif;
+    font-weight: 400;
+} */
+
+/* 右邊的導覽按鈕區 */
+
+.nav{/* 右邊的導覽按鈕框架 */
+    display: block;
+    line-height: 24px;
+    padding: 20px 16px;
+    transition: color 0.3;
+    align-items: center;
+
+    padding-right: 30px;
+} 
+@media screen and (max-width: 768px) {
+	.nav {
+		display: none;
+	}
+}
+.nav-item{ /* 每個導覽按鈕的設定 */
+    /* 字設定 */
+    font-family: "cwTeXFangSong", serif;
+    font-size: calc( 100vw * 24 / 1920 	);;
+    /* 空間設定 */
+    align-items: center;
+    display: inline; /*對物件本身 */
+    margin-right: 30px;
+    
+} 
+.nav-text{
+    color: #443226;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+.nav-text:hover{
+    color:#6ee7ff;
+}
+.nav-text:active{
+    color:#438e9d;
+    transform: translateY(2px);
+}
+
+
+/* ------------------------- *\ 
+    body 主內容
+\* ------------------------- */
+.drops{
+    width:150px;
+    height:auto;
+}
+
+.dessert{
+    background-color: #faf7ed;
+    color:#443226;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.coffee{
+    background-color: #022961;
+    color: #fffbfb;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.products{
+    display: flex;
+    
+    justify-self: center;
+}
+@media screen and (max-width:768px){
+    .products{
+      display: block;
+  }
+  }
+.products img{
+    border-radius: 12%;
+    margin:60px;
+    margin-bottom: 50px;
+}
+.product-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-intro div{
+    box-sizing: border-box;
+    width:320px;
+    margin: 60px;
+    margin-top: 0%;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.product-intro div h3{
+    margin-top: 0%;
+    margin-bottom: 30px;
+}
+.product-intro div h6{
+    margin:0;
+    margin-top: 20px;
+    line-height: 35px;
+}
+.product-intro div h5{
+    margin:0;
+    margin-top: 20px;
+    line-height: 35px;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px){
+    .star_white{
+      width: 80%;
+      height: auto;
+  }}
+/* ------------------------- *\ 
+    footer 頁尾
+\* ------------------------- */
+footer{
+    background-color: #04172A;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;/* 居中對齊 */
+    padding:20px 20px 20px 60px;
+}
+
+@media screen and (max-width: 768px) {
+	footer {
+        flex-direction: column;
+        padding: 0%;
+	}
+}
+@media screen and (max-width: 768px) {
+	footer p{
+        justify-content: center;
+        font-family: serif;
+	}
+}
+.footer-small {
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+	.footer-small {
+		display: none;
+	}
+}
+.footer-small-ul{
+    list-style: none;
+    display: block;
+    padding: 0%;
+}
+@media screen and (min-width: 768px) {
+	.footer-small-ul {
+		display: none;
+	}
+}
+.footer-small-item{
+    display: flex;
+    justify-content: center;
+    
+}
+.small-nav-text{
+  color: #fff;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-family: serif;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+	.icons {
+		margin-bottom: 30px;
+	}
+}
+.icon-item{
+    align-items: center;
+    display: inline; /*對物件本身 */
+    margin-right: 50px;
+}
+@media screen and (max-width: 768px) {
+	.icon-item.mail {
+		margin: 0%;
+	}
+}

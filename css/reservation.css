@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+/* 
+*page name 眠貓咖啡屋 reservation
+*copyright 2024
+*author 余盈蓁 陳星璇
+*licensed
+*/
+html{
+    background-color: #052063ff;
+}
+body{
+    margin:0;
+    font-family: '微軟正黑體',arial;/* 新增字體設定 前面微軟正黑體為主要字體，後面為替補字體 */
+}
+/* 字體設定 */
+h1,h2{
+    font-family: "cwTeXFangSong", serif;
+    font-weight: normal;
+}
+h3,h4,h5,h6 {
+    font-family: "微軟正黑體", serif;
+    font-weight: normal; /* 取消粗體 */
+}
+
+
+
+/* ------------------------- *\ 
+    Layout
+\* ------------------------- */
+
+.mask-dark{
+    /* 注意權重，以及遮罩寫的位置 */
+    position: absolute;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 首圖 */
+.first{
+    /* width: 1920px; */
+    height: 455px;
+    background-image: url("../images/home_first-v4.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    /* title */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+
+
+
+
+
+/* ------------------------- *\ 
+    navbar 導覽列
+\* ------------------------- */
+
+
+.navbar{/* 導覽列大框架 */
+    height: 120px;/* 高度 */
+    background-color:rgba(4,23,42,0.85);/* 將hex色彩轉成rgba，最後一個數值為透明度 */
+    display: flex;
+    position: fixed;
+    z-index: 500;
+    width: 100%;
+    left: 0;
+    top: 0;
+    justify-content: space-between;/* logo 導覽按鈕左右分開 */
+    align-items: center;/* 居中對齊 */
+}
+
+/* 左側logo與title處 */
+
+.logontitle{/* logo & title */
+    display: flex;
+    align-items: center;
+}
+.logo img{/* logo圖 */
+    width: 80px;
+    height: 80px;
+    margin: 20px 30px 20px 60px;
+}
+.header-title{
+    margin:0;
+    margin-left: 20px;
+    color: #ffffff;
+    font-family: "cwTeXFangSong", serif;
+    font-weight: 400;
+}
+
+/* 右邊的導覽按鈕區 */
+
+.nav{/* 右邊的導覽按鈕框架 */
+    display: block;
+    color: white;
+    line-height: 24px;
+    padding: 20px 16px;
+    transition: color 0.3;
+    align-items: center;
+
+    padding-right: 50px;
+} 
+.nav-item{ /* 每個導覽按鈕的設定 */
+    /* 字設定 */
+    font-family: "cwTeXFangSong", serif;
+    font-size: 28px;
+    /* 空間設定 */
+    align-items: center;
+    display: inline; /*對物件本身 */
+    margin-right: 50px;
+    
+} 
+.nav-text{
+    color: #ffffff;
+    padding: 20px 16px;
+    text-decoration: none;
+}
+.nav-text:hover{
+    color:#6ee7ff;
+}
+.nav-text:active{
+    color:#438e9d;
+    transform: translateY(2px);
+}
+
+/* ------------------------- *\ 
+    body 主內容
+\* ------------------------- */
+.main{
+    background-color: #faf7ed;
+    color:#443226;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.main form{
+    margin:30px;
+    margin-bottom: 100px;
+}
+
+.form-items{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.form-items h3{
+    margin-top:16px;
+    margin-bottom:16px;
+}
+.form-control{
+    box-sizing: border-box;
+    align-self: center;
+    width:400px;
+    height:42px;
+    padding: 0%;
+    background-color: #faf7ed;
+    font-size:x-large;
+}
+
+
+/* ------------------------- *\ 
+    footer 頁尾
+\* ------------------------- */
+
+
+footer{
+    background-color: #04172A;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;/* 居中對齊 */
+    padding:20px 20px 20px 60px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-item{
+    align-items: center;
+    display: inline; /*對物件本身 */
+    margin-right: 50px;
+}
